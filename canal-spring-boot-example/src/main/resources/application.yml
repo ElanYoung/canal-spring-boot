@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: spring-boot-canal
+  # 激活环境配置
+  profiles:
+    active: dev
+  # 文件编码 UTF8
+  mandatory-file-encoding: UTF-8
+  mvc:
+    # 解决Springfox路径匹配问题
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  freemarker:
+    check-template-location: false
+
+canal:
+  server:
+    ip: 192.168.38.133
+    port: 11111
+    username: canal
+    password: Canal123!
+  async: true
+  destination: boss

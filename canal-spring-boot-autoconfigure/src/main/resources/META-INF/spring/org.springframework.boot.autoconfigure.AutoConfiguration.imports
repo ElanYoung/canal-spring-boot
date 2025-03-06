@@ -1,0 +1,2 @@
+io.github.elanyoung.canal.autoconfigure.CanalAutoConfiguration
+io.github.elanyoung.canal.autoconfigure.ThreadPoolAutoConfiguration
