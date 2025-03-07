@@ -1,15 +1,15 @@
 <h1 align="center"><a href="https://github.com/ElanYoung/canal-spring-boot" target="_blank">🚀 Canal Spring Boot Starter</a></h1>
 <p align="center">
   <a href="https://doc.starimmortal.com"><img alt="author" src="https://img.shields.io/badge/author-ElanYoung-blue.svg"/></a>
-  <a href="https://search.maven.org/search?q=g:com.starimmortal%20AND%20a:canal-spring-boot-starter"><img alt="Maven Central" src="https://img.shields.io/maven-central/v/com.starimmortal/canal-spring-boot-starter?label=Maven%20Central"/></a>
-  <a href="https://docs.spring.io/spring-boot/docs/2.7.12/reference/html/"><img alt="Spring Boot" src="https://img.shields.io/badge/Spring Boot-2.7.18-brightgreen.svg"/></a>
-  <a href="https://github.com/StarImmortal/canal-spring-boot/blob/master/LICENSE"><img alt="LICENSE" src="https://img.shields.io/github/license/StarImmortal/canal-spring-boot.svg"/></a>
+  <a href="https://search.maven.org/search?q=g:io.github.elanyoung:canal-spring-boot-starter"><img alt="Maven Central" src="https://img.shields.io/maven-central/v/com.starimmortal/canal-spring-boot-starter?label=Maven%20Central"/></a>
+  <a href="https://docs.spring.io/spring-boot/docs/2.7.18/reference/html/"><img alt="Spring Boot" src="https://img.shields.io/badge/Spring Boot-2.7.18-brightgreen.svg"/></a>
+  <a href="https://github.com/ElanYoung/canal-spring-boot/blob/master/LICENSE"><img alt="LICENSE" src="https://img.shields.io/github/license/ElanYoung/canal-spring-boot.svg"/></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/StarImmortal/canal-spring-boot/stargazers"><img alt="star" src="https://img.shields.io/github/stars/StarImmortal/canal-spring-boot.svg?label=Stars&style=social"/></a>
-  <a href="https://github.com/StarImmortal/canal-spring-boot/network/members"><img alt="star" src="https://img.shields.io/github/forks/StarImmortal/canal-spring-boot.svg?label=Fork&style=social"/></a>
-  <a href="https://github.com/StarImmortal/canal-spring-boot/watchers"><img alt="star" src="https://img.shields.io/github/watchers/StarImmortal/canal-spring-boot.svg?label=Watch&style=social"/></a>
+  <a href="https://github.com/ElanYoung/canal-spring-boot/stargazers"><img alt="star" src="https://img.shields.io/github/stars/ElanYoung/canal-spring-boot.svg?label=Stars&style=social"/></a>
+  <a href="https://github.com/ElanYoung/canal-spring-boot/network/members"><img alt="star" src="https://img.shields.io/github/forks/ElanYoung/canal-spring-boot.svg?label=Fork&style=social"/></a>
+  <a href="https://github.com/ElanYoung/canal-spring-boot/watchers"><img alt="star" src="https://img.shields.io/github/watchers/ElanYoung/canal-spring-boot.svg?label=Watch&style=social"/></a>
 </p>
 
 ## 简介
@@ -53,30 +53,24 @@ canal:
 
 #### 配置说明
 
-| 属性                    | 描述                                                                                                    | 默认值       |
-|-----------------------|-------------------------------------------------------------------------------------------------------|-----------|
-| canal.mode            | 指定 Canal 客户端类型。支持的类型包括：`simple`（单节点）、`cluster`（集群）、`zk`（Zookeeper）、`kafka`（Kafka，仅支持 flatMessage 格式）。 | `default` |
-| canal.filter          | 配置订阅的表名称。若配置，则仅订阅指定的表；若未配置，则订阅所有表。                                                                    | `""`      |
-| canal.batch-size      | 每次消费的消息数量。当消息数量达到该值时，将触发一次消费操作。                                                                       | `1`       |
-| canal.timeout         | 消费消息的时间间隔（单位：秒）。                                                                                      | `1`       |
-| canal.server          | Canal 服务端的地址，多个地址以英文逗号分隔，格式为 `host:port`。                                                             | `null`    |
-| canal.destination     | Canal 实例名称。在 Kafka 模式下表示 Topic 名称，在 RabbitMQ 模式下表示 Queue 名称。                                          | `null`    |
-| canal.username        | 访问 Canal 或 RabbitMQ 的用户名。                                                                             | `null`    |
-| canal.password        | 访问 Canal 或 RabbitMQ 的密码。                                                                              | `null`    |
-| canal.group-id        | Kafka 消费者组 ID，用于 Kafka 客户端订阅消息。                                                                       | `null`    |
-| canal.async           | 是否启用异步消费模式。若启用异步消费，消费时异常将不会触发消息回滚，且无法保证消息顺序消费。                                                        | `true`    |
-| canal.partition       | Kafka 分区编号。                                                                                           | `null`    |
-| canal.vhost           | RabbitMQ 虚拟主机名称。                                                                                      | `"/"`     |
-| canal.accessKey       | RabbitMQ 访问密钥（Access Key）。                                                                            | `""`      |
-| canal.secretKey       | RabbitMQ 密钥（Secret Key）。                                                                              | `""`      |
-| canal.resourceOwnerId | RabbitMQ 资源所有者 ID。                                                                                    | `null`    |
+| 属性                    | 描述                                             | 默认值         |
+|-----------------------|------------------------------------------------|-------------|
+| canal.server.ip       | Canal 服务端地址。                                   | `127.0.0.1` |
+| canal.server.port     | Canal 服务端端口号。                                  | `11111`     |
+| canal.server.username | Canal 用户名。                                     | `null`      |
+| canal.server.password | Canal 密码。                                      | `null`      |
+| canal.destination     | Canal 实例名称。                                    | `null`      |
+| canal.filter          | 配置订阅表名称。若配置，则仅订阅指定表；若未配置，则订阅所有表。               | `""`        |
+| canal.batch-size      | 消息消费数量。当消息数量达到该值时，将触发一次消费操作。                   | `1`         |
+| canal.timeout         | 消息消费时间间隔（单位：秒）。                                | `1`         |
+| canal.async           | 是否启用异步消费模式。若启用异步消费，消费时异常将不会触发消息回滚，且无法保证消息顺序消费。 | `true`      |
 
 ### 创建监听器
 
 ```java
 @Slf4j
 @Component
-@CanalTable(value = "stu")
+@CanalTable(value = "student")
 public class StudentHandler implements EntryHandler<StudentDO> {
 
 	@Override
@@ -112,10 +106,10 @@ public class StudentHandler implements EntryHandler<StudentDO> {
 
 ## 项目趋势
 
-[![Stargazers over time](https://starchart.cc/StarImmortal/canal-spring-boot.svg)](https://starchart.cc/StarImmortal/canal-spring-boot)
+[![Stargazers over time](https://starchart.cc/ElanYoung/canal-spring-boot.svg)](https://starchart.cc/ElanYoung/canal-spring-boot)
 
 ## 开源协议
 
 [Apache License](https://opensource.org/license/apache-2-0/)
 
-Copyright (c) 2023 ElanYoung
+Copyright (c) 2025 ElanYoung
