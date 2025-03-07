@@ -30,7 +30,7 @@
 	<scm>
 		<connection>scm:git:git://github.com/ElanYoung/canal-spring-boot.git</connection>
 		<developerConnection>scm:git:ssh://github.com:ElanYoung/canal-spring-boot.git</developerConnection>
-		<url>http://github.com/ElanYoung/canal-spring-boot/tree/master</url>
+		<url>https://github.com/ElanYoung/canal-spring-boot/tree/master</url>
 	</scm>
 
 	<developers>

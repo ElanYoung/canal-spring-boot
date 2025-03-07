@@ -1,7 +1,7 @@
 package io.github.elanyoung.canal.core.exception;
 
 /**
- * Canal 异常类
+ * Canal异常类
  *
  * @author william@StarImmortal
  * @since 2025/02/25

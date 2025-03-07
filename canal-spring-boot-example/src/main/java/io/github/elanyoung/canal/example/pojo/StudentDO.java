@@ -3,8 +3,10 @@ package io.github.elanyoung.canal.example.pojo;
 import lombok.Data;
 
 /**
+ * 学生实体
+ *
  * @author william@StarImmortal
- * @since 2025/2/2
+ * @since 2025/02/02
  */
 @Data
 public class StudentDO {
