@@ -1,7 +1,7 @@
 <h1 align="center"><a href="https://github.com/ElanYoung/canal-spring-boot" target="_blank">🚀 Canal Spring Boot Starter</a></h1>
 <p align="center">
   <a href="https://doc.starimmortal.com"><img alt="author" src="https://img.shields.io/badge/author-ElanYoung-blue.svg"/></a>
-  <a href="https://search.maven.org/search?q=g:io.github.elanyoung:canal-spring-boot-starter"><img alt="Maven Central" src="https://img.shields.io/maven-central/v/com.starimmortal/canal-spring-boot-starter?label=Maven%20Central"/></a>
+  <a href="https://search.maven.org/search?q=io.github.elanyoung:canal-spring-boot-starter"><img alt="Maven Central" src="https://img.shields.io/maven-central/v/io.github.elanyoung/canal-spring-boot-starter?label=Maven%20Central"/></a>
   <a href="https://docs.spring.io/spring-boot/docs/2.7.18/reference/html/"><img alt="Spring Boot" src="https://img.shields.io/badge/Spring Boot-2.7.18-brightgreen.svg"/></a>
   <a href="https://github.com/ElanYoung/canal-spring-boot/blob/master/LICENSE"><img alt="LICENSE" src="https://img.shields.io/github/license/ElanYoung/canal-spring-boot.svg"/></a>
 </p>
