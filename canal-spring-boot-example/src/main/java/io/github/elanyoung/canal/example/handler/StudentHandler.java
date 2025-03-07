@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
  */
 @Slf4j
 @Component
-@CanalTable(value = "stu")
+@CanalTable(value = "student")
 public class StudentHandler implements EntryHandler<StudentDO> {
 
 	@Override
